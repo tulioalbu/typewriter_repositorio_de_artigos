@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/typewriter_repositorio_de_artigos.iml" filepath="$PROJECT_DIR$/.idea/modules/typewriter_repositorio_de_artigos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/typewriter.iml" filepath="$PROJECT_DIR$/.idea/modules/typewriter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/typewriter.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/typewriter.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/typewriter.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/typewriter.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/typewriter.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/typewriter.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/typewriter.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/typewriter.app.unitTest.iml" />
     </modules>
   </component>
 </project>
