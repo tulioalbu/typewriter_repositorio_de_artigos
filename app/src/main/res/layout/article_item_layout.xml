@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/articleTitle"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:fontFamily="@font/courier_prime_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textAllCaps="false"
+            tools:text="Title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textResume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:fontFamily="@font/courier_prime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articleTitle"
+            tools:text="Resume" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textResume2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:fontFamily="@font/courier_prime"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textResume"
+            tools:text="Author" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textResume4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:fontFamily="@font/courier_prime"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/textResume2"
+            tools:text="Text Size" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textResume"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
