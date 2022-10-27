@@ -1,4 +1,4 @@
-package me.project.typewriter.data
+package me.project.typewriter.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

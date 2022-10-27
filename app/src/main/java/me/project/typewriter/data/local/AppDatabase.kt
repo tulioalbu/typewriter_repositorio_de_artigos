@@ -1,4 +1,4 @@
-package me.project.typewriter.data
+package me.project.typewriter.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
