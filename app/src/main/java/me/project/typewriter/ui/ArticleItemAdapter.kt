@@ -1,33 +1,38 @@
 package me.project.typewriter.ui
 
-import android.annotation.SuppressLint
+
+import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import me.project.typewriter.databinding.ArticleItemLayoutBinding
 import me.project.typewriter.model.Article
 
 class ArticleItemAdapter(private val onItemClicked: (Article) -> Unit) :
-    RecyclerView.Adapter<MainViewHolder>() {
+    RecyclerView.Adapter<ArticleViewHolder>() {
+
 
     private var articleList = mutableListOf<Article>()
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun setArticleList(lives: List<Article>) {
+    fun setArticleList(articleList: List<Article>) {
 
-        this.articleList = lives.toMutableList()
+        this.articleList = articleList.toMutableList()
         notifyDataSetChanged()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ArticleItemLayoutBinding.inflate(inflater, parent, false)
-        return MainViewHolder(binding)
+        return ArticleViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        val live = articleList[position]
-        holder.bind(live, onItemClicked)
+    override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
+        val article = articleList[position]
+        holder.bind(article, onItemClicked)
+
     }
 
     override fun getItemCount(): Int {
@@ -35,19 +40,25 @@ class ArticleItemAdapter(private val onItemClicked: (Article) -> Unit) :
     }
 }
 
-class MainViewHolder(val binding: ArticleItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+class ArticleViewHolder(private val binding: ArticleItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+
 
     fun bind(article: Article, onItemClicked: (Article) -> Unit) {
 
         binding.txtTitle.text = article.title
         binding.txtResume.text = article.resume
-        binding.txtAuthor.text= article.user.username
-        binding.txtSize.text = article.user.username
-
+        binding.txtAuthor.text= "TulioAlbu"
+        binding.txtSize.text = "345"
         itemView.setOnClickListener {
             onItemClicked(article)
+
+
         }
 
     }
 
+
+
+
 }
+

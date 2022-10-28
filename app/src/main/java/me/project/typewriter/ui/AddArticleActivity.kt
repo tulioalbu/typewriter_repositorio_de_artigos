@@ -2,18 +2,34 @@ package me.project.typewriter.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import me.project.typewriter.databinding.ActivityAddArticleBinding
+import me.project.typewriter.model.Article
+import me.project.typewriter.model.User
+import me.project.typewriter.repositories.ArticleRepository
+import me.project.typewriter.rest.RetrofitService
+import me.project.typewriter.viewmodel.AddArticleViewModel
+import me.project.typewriter.viewmodel.AddArticleViewModelFactory
+import java.util.*
 
 
 class AddArticleActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityAddArticleBinding
+    private lateinit var viewModel: AddArticleViewModel
+    private lateinit var binding: ActivityAddArticleBinding
+    private val retrofitService = RetrofitService.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddArticleBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        viewModel = ViewModelProvider(this, AddArticleViewModelFactory(ArticleRepository(retrofitService))).get(
+            AddArticleViewModel::class.java
+        )
 
         binding.tilTitleEdit.doOnTextChanged { text, _, _, _ ->
             if(text!!.length < 30) {
@@ -25,10 +41,11 @@ class AddArticleActivity : AppCompatActivity() {
 
         binding.tilResumeEdit.doOnTextChanged { text, _, _, _  ->
             if(text!!.length < 50) {
-                 binding.tilResume.error = "Minimum: 50 characters"
+                binding.tilResume.error = "Minimum: 50 characters"
             } else if(text.length >= 50) {
-                 binding.tilResume.error = null
+                binding.tilResume.error = null
             }
+
         }
 
         binding.tilTextEdit.doOnTextChanged { text, _, _, _  ->
@@ -37,8 +54,81 @@ class AddArticleActivity : AppCompatActivity() {
             } else if(text.length >= 200) {
                 binding.tilText.error = null
             }
+        }
 
+        createUi()
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        viewModel.status.observe(this, Observer {
+            if (it) {
+                Toast.makeText(
+                    this,
+                    "You save your article with success!",
+                    Toast.LENGTH_SHORT
+                ).show()
+                finish()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Error",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
+    }
+
+
+    private fun createUi() {
+
+        this.binding.apply {
+
+            btnConfirm.setOnClickListener {
+
+                if (tilTitleEdit.text!!.isEmpty()) {
+                    tilTitleEdit.error = "Title is empty"
+                    tilTitleEdit.requestFocus()
+                    return@setOnClickListener
+                }
+
+                if (tilResumeEdit.text!!.isEmpty()) {
+                    tilResumeEdit.error = "Resume is empty"
+                    tilResumeEdit.requestFocus()
+                    return@setOnClickListener
+                }
+
+                if (tilTextEdit.text!!.isEmpty()) {
+                    tilTextEdit.error = "Text is empty"
+                    tilTextEdit.requestFocus()
+                    return@setOnClickListener
+                }
+
+                val article = Article(
+                    title = binding.tilTitleEdit.text.toString(),
+                    resume = binding.tilResumeEdit.text.toString(),
+                    text = binding.tilTextEdit.text.toString(),
+                    user = User(UUID.fromString("8b6951f2-5b43-4710-88a4-b33d7e20dbc1"), "TulioAlbu")
+                )
+
+                viewModel.saveArticle(article)
+            }
+
+            binding.btnClose.setOnClickListener {
+                finish()
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
             

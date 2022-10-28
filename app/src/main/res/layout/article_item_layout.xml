@@ -10,19 +10,17 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp">
+        android:layout_height="match_parent">
 
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/txtTitle"
-            android:layout_width="395dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:padding="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-            android:textColor="@color/black"
             android:textSize="24sp"
-            app:fontFamily="@font/courier_prime_bold"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,7 +35,6 @@
             android:padding="8dp"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:fontFamily="@font/courier_prime"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTitle"
@@ -50,8 +47,7 @@
             android:gravity="start"
             android:padding="8dp"
             android:textColor="@color/black"
-            android:textSize="14sp"
-            app:fontFamily="@font/courier_prime"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -66,8 +62,7 @@
             android:gravity="start"
             android:padding="8dp"
             android:textColor="@color/black"
-            android:textSize="14sp"
-            app:fontFamily="@font/courier_prime"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/txtAuthor"

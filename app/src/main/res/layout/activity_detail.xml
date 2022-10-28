@@ -53,7 +53,7 @@
             tools:text="Author " />
 
         <TextView
-            android:id="@+id/tv_description"
+            android:id="@+id/tv_article_text"
             style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             app:fontFamily="@font/courier_prime_bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintTop_toBottomOf="@+id/tv_article_text"
             tools:text="2021-03-2512:41:20Z" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

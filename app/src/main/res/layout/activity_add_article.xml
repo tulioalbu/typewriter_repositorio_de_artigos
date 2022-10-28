@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/til_title_edit"
+            android:id="@+id/tilTitleEdit"
             android:layout_width="match_parent"
             android:maxLength="70"
             android:layout_height="match_parent"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@id/til_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/til_resume_edit"
+            android:id="@+id/tilResumeEdit"
             android:inputType="text"
             android:maxLength="100"
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@id/til_resume">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/til_text_edit"
+            android:id="@+id/tilTextEdit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress" />
