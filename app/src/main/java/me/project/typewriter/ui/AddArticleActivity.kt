@@ -8,12 +8,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import me.project.typewriter.databinding.ActivityAddArticleBinding
 import me.project.typewriter.model.Article
-import me.project.typewriter.model.User
+import me.project.typewriter.model.UserData
 import me.project.typewriter.repositories.ArticleRepository
 import me.project.typewriter.rest.RetrofitService
 import me.project.typewriter.viewmodel.AddArticleViewModel
 import me.project.typewriter.viewmodel.AddArticleViewModelFactory
-import java.util.*
 
 
 class AddArticleActivity : AppCompatActivity() {
@@ -80,7 +79,6 @@ class AddArticleActivity : AppCompatActivity() {
         })
     }
 
-
     private fun createUi() {
 
         this.binding.apply {
@@ -106,10 +104,10 @@ class AddArticleActivity : AppCompatActivity() {
                 }
 
                 val article = Article(
-                    title = binding.tilTitleEdit.text.toString(),
-                    resume = binding.tilResumeEdit.text.toString(),
-                    text = binding.tilTextEdit.text.toString(),
-                    user = User(UUID.fromString("8b6951f2-5b43-4710-88a4-b33d7e20dbc1"), "TulioAlbu")
+                    title = binding.tilTitle.editText?.text.toString(),
+                    resume = binding.tilResume.editText?.text.toString(),
+                    text = binding.tilText.editText?.text.toString(),
+                    User = UserData("s", "s")
                 )
 
                 viewModel.saveArticle(article)

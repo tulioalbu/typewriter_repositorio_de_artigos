@@ -1,4 +1,4 @@
-/*package me.project.typewriter.data
+package me.project.typewriter.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -8,4 +8,3 @@ import me.project.typewriter.model.Article
 abstract class AppDatabase : RoomDatabase() {
     abstract fun articleDao(): ArticleDao
 }
-*/

@@ -13,10 +13,10 @@
             android:id="@+id/btn_return"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="?attr/actionBarItemBackground"
-            android:src="@drawable/ic_baseline_undo_24"
+            android:src="@drawable/ic_baseline_close_24"
             app:layout_constraintBottom_toTopOf="@id/tv_title"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -31,5 +31,4 @@ class MainViewModel constructor(private val repository: ArticleRepository) : Vie
 
         })
     }
-
 }

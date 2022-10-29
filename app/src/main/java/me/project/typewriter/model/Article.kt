@@ -11,10 +11,8 @@ data class Article(
     val resume: String,
     val text: String,
     @Embedded
-    val user: User
+    val User: UserData
 )
-
-
 
 
 

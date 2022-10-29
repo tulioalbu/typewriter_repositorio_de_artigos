@@ -1,6 +1,7 @@
 package me.project.typewriter.ui
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: MainViewModel
     private val retrofitService = RetrofitService.getInstance()
-    private val adapter = ArticleItemAdapter { articleList ->
+    private var adapter = ArticleItemAdapter { articleList ->
         openArticle(articleList)
     }
 
@@ -45,12 +46,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, AddArticleActivity::class.java))
         }
 
+
         binding.articlesListRV.addItemDecoration(
             DividerItemDecoration(
                 this,
                 LinearLayoutManager.VERTICAL
             )
         )
+
         binding.articlesListRV.layoutManager = LinearLayoutManager(this)
         binding.articlesListRV.adapter = adapter
 
@@ -96,6 +99,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openArticle(article: Article) {
+
+        val articleIntent = Intent(this@MainActivity, ArticleDetailActivity::class.java )
+        startActivity(articleIntent)
 
     }
 

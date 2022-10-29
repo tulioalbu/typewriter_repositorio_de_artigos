@@ -1,11 +1,9 @@
 package me.project.typewriter.ui
 
 
-import android.content.Intent
+
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import me.project.typewriter.databinding.ArticleItemLayoutBinding
@@ -45,17 +43,22 @@ class ArticleViewHolder(private val binding: ArticleItemLayoutBinding) : Recycle
 
     fun bind(article: Article, onItemClicked: (Article) -> Unit) {
 
+
         binding.txtTitle.text = article.title
         binding.txtResume.text = article.resume
         binding.txtAuthor.text= "TulioAlbu"
-        binding.txtSize.text = "345"
+        binding.imageButton.setOnClickListener{
+
+
+        }
         itemView.setOnClickListener {
             onItemClicked(article)
-
 
         }
 
     }
+
+
 
 
 

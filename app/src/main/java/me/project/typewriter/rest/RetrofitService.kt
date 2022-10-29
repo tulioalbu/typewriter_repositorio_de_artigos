@@ -5,9 +5,7 @@ import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 
 interface RetrofitService {
@@ -22,12 +20,12 @@ interface RetrofitService {
 
     private val retrofitService : RetrofitService by lazy {
 
-        val retrofitService = Retrofit.Builder()
+        val retrofit = Retrofit.Builder()
             .baseUrl("http://processoseletivo.audax.mobi/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        retrofitService.create(RetrofitService::class.java)
+        retrofit.create(RetrofitService::class.java)
     }
 
         fun getInstance(): RetrofitService {

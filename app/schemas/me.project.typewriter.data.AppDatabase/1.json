@@ -27,13 +27,13 @@
             "notNull": true
           },
           {
-            "fieldPath": "user.uuid",
+            "fieldPath": "User.uuid",
             "columnName": "uuid",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "user.username",
+            "fieldPath": "User.username",
             "columnName": "username",
             "affinity": "TEXT",
             "notNull": true

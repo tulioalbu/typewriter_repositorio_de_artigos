@@ -1,4 +1,4 @@
-/*package me.project.typewriter.data
+package me.project.typewriter.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -18,4 +18,3 @@ interface ArticleDao {
     fun delete(vararg article: Article)
 
 }
-*/
