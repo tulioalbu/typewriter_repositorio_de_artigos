@@ -15,7 +15,7 @@ class AddArticleViewModel constructor(private val repository: ArticleRepository)
 
     fun saveArticle(article: Article) {
 
-        val request = this.repository.saveArticle(article)
+        val request = repository.saveArticle(article)
         request.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(
                 call: Call<ResponseBody>,

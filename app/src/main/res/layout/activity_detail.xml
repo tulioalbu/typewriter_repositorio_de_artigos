@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/btn_return"
+            android:id="@+id/btn_close"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
@@ -34,7 +34,7 @@
             app:fontFamily="@font/courier_prime_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_return"
+            app:layout_constraintTop_toBottomOf="@id/btn_close"
             tools:text="Title" />
 
         <TextView

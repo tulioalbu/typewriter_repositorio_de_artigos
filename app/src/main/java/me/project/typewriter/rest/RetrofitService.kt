@@ -6,6 +6,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.*
+import java.util.*
 
 
 interface RetrofitService {
@@ -15,6 +16,12 @@ interface RetrofitService {
 
     @POST("article")
     fun saveArticle(@Body article: Article): Call<ResponseBody>
+
+    @DELETE("article/{uuid}")
+    fun deleteArticle(): Call<ResponseBody>
+
+    @PATCH("article/{uuid}")
+    fun editArticle(): Call<ResponseBody>
 
     companion object {
 

@@ -12,7 +12,6 @@ import me.project.typewriter.model.Article
 class ArticleItemAdapter(private val onItemClicked: (Article) -> Unit) :
     RecyclerView.Adapter<ArticleViewHolder>() {
 
-
     private var articleList = mutableListOf<Article>()
 
     fun setArticleList(articleList: List<Article>) {
@@ -40,28 +39,18 @@ class ArticleItemAdapter(private val onItemClicked: (Article) -> Unit) :
 
 class ArticleViewHolder(private val binding: ArticleItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
 
-
     fun bind(article: Article, onItemClicked: (Article) -> Unit) {
-
 
         binding.txtTitle.text = article.title
         binding.txtResume.text = article.resume
-        binding.txtAuthor.text= "TulioAlbu"
-        binding.imageButton.setOnClickListener{
-
+        binding.txtAuthor.text= article.User.username
+        binding.imgDelete.setOnClickListener {
 
         }
         itemView.setOnClickListener {
             onItemClicked(article)
 
         }
-
     }
-
-
-
-
-
-
 }
 

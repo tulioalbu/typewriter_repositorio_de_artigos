@@ -5,5 +5,5 @@ import java.util.*
 
 data class UserData(
     val uuid: String,
-    val username: String = "TulioAlbu"
+    val username: String
     )

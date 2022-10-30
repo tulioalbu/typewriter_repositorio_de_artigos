@@ -13,6 +13,7 @@ import me.project.typewriter.repositories.ArticleRepository
 import me.project.typewriter.rest.RetrofitService
 import me.project.typewriter.viewmodel.AddArticleViewModel
 import me.project.typewriter.viewmodel.AddArticleViewModelFactory
+import java.util.*
 
 
 class AddArticleActivity : AppCompatActivity() {
@@ -107,7 +108,7 @@ class AddArticleActivity : AppCompatActivity() {
                     title = binding.tilTitle.editText?.text.toString(),
                     resume = binding.tilResume.editText?.text.toString(),
                     text = binding.tilText.editText?.text.toString(),
-                    User = UserData("s", "s")
+                    User = UserData("8b6951f2-5b43-4710-88a4-b33d7e20dbc1", "TulioAlbu")
                 )
 
                 viewModel.saveArticle(article)

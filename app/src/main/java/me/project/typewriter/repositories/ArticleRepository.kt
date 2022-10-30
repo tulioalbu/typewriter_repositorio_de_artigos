@@ -7,5 +7,7 @@ class ArticleRepository constructor (private val retrofitService: RetrofitServic
 
     fun saveArticle (article: Article) = retrofitService.saveArticle(article)
     fun getAllArticles() = retrofitService.getAllArticles()
+    fun deleteArticle() = retrofitService.deleteArticle()
+    fun editArticle() = retrofitService.editArticle()
 
 }
