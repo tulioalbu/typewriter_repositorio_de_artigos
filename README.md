@@ -1,12 +1,8 @@
-<p float="left">
-   <img src="https://tulioalbu.github.io/GithubStage_Projeto-DIO/Screenshots/Screenshot_20220806_023153.png" width = "180" hspace="2">
-   <img src="https://tulioalbu.github.io/GithubStage_Projeto-DIO/Screenshots/Screenshot_20220815_230810.png" width = "180" hspace="2">
-   <img src="https://tulioalbu.github.io/GithubStage_Projeto-DIO/Screenshots/Screenshot_20220815_231049.png" width = "180" hspace="2">
-   
-
 ### Apresentação
   
-  
+<p float="left">
+<img src="https://tulioalbu.github.io/typewriter_repositorio_de_artigos/Screenshots/Screenshot_20221029_214804.png" width = "140">
+
 
 Typewriter é um aplicativo para Android Nativo que consome uma API de CRUD de artigos. O código foi construído utilizando conceitos da Arquitetura MVVM (Model-View-ViewModel) e foram utilizadas duas bibliotecas: Retrofit2 para a conexão com a API e o Room para a persistência de dados locais. O layout foi construído em XML.
 
