@@ -1,8 +1,12 @@
-<p align="center"> 
-<img src="https://tulioalbu.github.io/Yara_API-envio-de-emails-automatizados/Yara1.png" width="400" height="400"  />
-</p>
+<p float="left">
+   <img src="https://tulioalbu.github.io/GithubStage_Projeto-DIO/Screenshots/Screenshot_20220806_023153.png" width = "180" hspace="2">
+   <img src="https://tulioalbu.github.io/GithubStage_Projeto-DIO/Screenshots/Screenshot_20220815_230810.png" width = "180" hspace="2">
+   <img src="https://tulioalbu.github.io/GithubStage_Projeto-DIO/Screenshots/Screenshot_20220815_231049.png" width = "180" hspace="2">
+   
 
 ### Apresentação
+  
+  
 
 Typewriter é um aplicativo para Android Nativo que consome uma API de CRUD de artigos. O código foi construído utilizando conceitos da Arquitetura MVVM (Model-View-ViewModel) e foram utilizadas duas bibliotecas: Retrofit2 para a conexão com a API e o Room para a persistência de dados locais. O layout foi construído em XML.
 
