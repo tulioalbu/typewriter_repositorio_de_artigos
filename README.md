@@ -48,8 +48,8 @@ Ainda existem outras validações nesta activity. Caso o usuário digite menos d
 Caso todas as validações ocorram, o artigo é salvo com sucesso e um toast é exibido na Main Activity.
 
 ### Tela de Detalhes
-
-https://github.com/tulioalbu/typewriter_repositorio_de_artigos/blob/main/Screenshots/Screenshot_20221029_215147.png
+  
+<img src="https://github.com/tulioalbu/typewriter_repositorio_de_artigos/blob/main/Screenshots/Screenshot_20221029_215147.png" width = "140">
 
 Ao clicar em uma das notícias da lista na main activity, o usuário é direcionado para uma página de detalhes do artigo, onde é exibido o título, o autor, o texto e a data de registro. 
 
