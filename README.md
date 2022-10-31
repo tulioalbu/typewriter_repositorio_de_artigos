@@ -50,3 +50,13 @@ Caso todas as validações ocorram, o artigo é salvo com sucesso e um toast é 
 Ao clicar em uma das notícias da lista na main activity, o usuário é direcionado para uma página de detalhes do artigo, onde é exibido o título, o autor, o texto e a data de registro. 
 
 Caso deseje voltar para página inicial, basta clicar no ícone "X" no canto superior esquerdo da tela. 
+
+### Estrutura do código
+
+O código foi construído utilizando conceitos de MVVM (Model-View-ViewModel), onde existe uma camada que conecta a UI e a estrutura de dados do projeto. 
+
+Na Pasta Model cria-se a entidade que vai servir como modelo para as requisições. No caso do artigo, por exemplo, existem as variáveis que representam os campos de título, resumo, texto e usuário. Este último ainda se divide com os campos de uuid e username. 
+
+No repositório criam-se os métodos de get, post e delete e suas conexões com o RetrofitService, que é a classe que define os parâmetros do serviço que se conecta com a API.
+
+Ainda há a pasta data, que é responsável pela persistência local dos dados e as atividades, que são a parte principal do código, onde é construída a interface gráfica e definidas suas interações com o usuário.
