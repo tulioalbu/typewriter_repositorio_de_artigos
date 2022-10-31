@@ -52,6 +52,8 @@ Ao clicar em uma das notícias da lista na main activity, o usuário é direcion
 Caso deseje voltar para página inicial, basta clicar no ícone "X" no canto superior esquerdo da tela. 
 
 ### Estrutura do código
+  
+<img src="https://github.com/tulioalbu/typewriter_repositorio_de_artigos/blob/main/Screenshots/Captura de Tela 2022-10-31 às 10.52.31.png" width = "140">  
 
 O código foi construído utilizando conceitos de MVVM (Model-View-ViewModel), onde existe uma camada que conecta a UI e a estrutura de dados do projeto. 
 
