@@ -8,14 +8,10 @@ Typewriter é um aplicativo para Android Nativo que consome uma API de CRUD de a
 
 ### Tecnologias utilizadas: 
 
-Kotlin
-<div>
-XML
-<div>
-Retrofit2
-<div>
-Room
-<div>
+Kotlin<div>
+XML<div>
+Retrofit2<div>
+Room<div>
 Arquitetura MVVM
 
 ### Tela Inicial 
