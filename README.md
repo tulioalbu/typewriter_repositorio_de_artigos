@@ -6,7 +6,7 @@
 
 Typewriter é um aplicativo para Android Nativo que consome uma API de CRUD de artigos. O código foi construído utilizando conceitos da Arquitetura MVVM (Model-View-ViewModel) e foram utilizadas duas bibliotecas: Retrofit2 para a conexão com a API e o Room para a persistência de dados locais. O layout foi construído em XML.
 
-### Tecnologias utilizadas: 
+### Tecnologias e conceitos utilizados: 
 
 Kotlin<div>
 XML<div>
