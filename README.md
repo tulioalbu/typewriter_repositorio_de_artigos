@@ -22,7 +22,7 @@ Arquitetura MVVM
 
 Após a exibição da tela de Splash Screen, é aberta a Main Activity, onde são exibidas as notícias conseguidas através do GET request na API. Durante o processo de loading ou caso não existam dados cadastrados, o app exibe a mensagem de que não existem artigos para exibir.
 
-O layout da Main Activity exibe uma Recycler View que com inúmeros card views que mostram Título, Resumo e Autor do Artigo, além de um botão para deletar a notícia. O Float Action Button leva para a activity de cadastro de notícias.
+O layout da Main Activity exibe uma Recycler View com inúmeros card views que mostram Título, Resumo e Autor do Artigo, além de um botão para deletar a notícia. O Float Action Button leva para a activity de cadastro de notícias.
 
 ### Tela de Cadastro de Artigos
 
